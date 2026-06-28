@@ -17,6 +17,11 @@ body {
 .notebook {
   display: flex;
   box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  border: 6px solid #c4a882;
+  border-radius: 8px;
+  outline: 3px solid #e8d5b5;
+  outline-offset: 4px;
+  position: relative;
 }
 
 .page {
@@ -76,4 +81,38 @@ button {
 button:hover {
   background: #8b3a2a;
   color: white;
+}
+
+.flower {
+  position: absolute;
+  font-size: 22px;
+  color: #a0785a;
+  z-index: 10;
+}
+
+.tl { top: -14px; left: -14px; }
+.tr { top: -14px; right: -14px; }
+.bl { bottom: -14px; left: -14px; }
+.br { bottom: -14px; right: -14px; }
+
+.notebook::before {
+  content: "❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀";
+  position: absolute;
+  top: -28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #a0785a;
+}
+
+.notebook::after {
+  content: "❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀ ✿ ❀";
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #a0785a;
 }
