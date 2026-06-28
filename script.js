@@ -7,8 +7,12 @@ const nextBtn = document.getElementById('next');
 const pages = document.querySelectorAll('.page');
 
 const totalPages = 10;
-const notes = Array(totalPages).fill('');
+const notes = JSON.parse(localStorage.getItem('notebook-notes')) || Array(totalPages).fill('');
 let currentSpread = 0;
+
+function saveNotes() {
+  localStorage.setItem('notebook-notes', JSON.stringify(notes));
+}
 
 function loadSpread() {
   const l = currentSpread * 2;
@@ -32,10 +36,12 @@ function flipTo(newSpread) {
 
 leftPage.addEventListener('input', () => {
   notes[currentSpread * 2] = leftPage.value;
+  saveNotes();
 });
 
 rightPage.addEventListener('input', () => {
   notes[currentSpread * 2 + 1] = rightPage.value;
+  saveNotes();
 });
 
 nextBtn.addEventListener('click', () => {
