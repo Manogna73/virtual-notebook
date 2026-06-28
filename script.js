@@ -1,9 +1,10 @@
- const leftPage = document.querySelector('.left-page textarea');
+const leftPage = document.querySelector('.left-page textarea');
 const rightPage = document.querySelector('.right-page textarea');
 const leftNum = document.querySelector('.left-page .page-num');
 const rightNum = document.querySelector('.right-page .page-num');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
+const pages = document.querySelectorAll('.page');
 
 const totalPages = 10;
 const notes = Array(totalPages).fill('');
@@ -20,6 +21,15 @@ function loadSpread() {
   nextBtn.disabled = currentSpread === 4;
 }
 
+function flipTo(newSpread) {
+  pages.forEach(p => p.classList.add('flipping'));
+  setTimeout(() => {
+    currentSpread = newSpread;
+    loadSpread();
+    pages.forEach(p => p.classList.remove('flipping'));
+  }, 300);
+}
+
 leftPage.addEventListener('input', () => {
   notes[currentSpread * 2] = leftPage.value;
 });
@@ -29,17 +39,11 @@ rightPage.addEventListener('input', () => {
 });
 
 nextBtn.addEventListener('click', () => {
-  if (currentSpread < 4) {
-    currentSpread++;
-    loadSpread();
-  }
+  if (currentSpread < 4) flipTo(currentSpread + 1);
 });
 
 prevBtn.addEventListener('click', () => {
-  if (currentSpread > 0) {
-    currentSpread--;
-    loadSpread();
-  }
+  if (currentSpread > 0) flipTo(currentSpread - 1);
 });
 
 loadSpread();

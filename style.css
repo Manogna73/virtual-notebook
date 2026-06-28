@@ -121,3 +121,12 @@ button:hover {
   font-size: 16px;
   color: #a0785a;
 }
+
+.page {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page.flipping {
+  opacity: 0;
+  transform: scaleX(0.8);
+}
