@@ -1,11 +1,29 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Virtual Notebook</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>My Virtual Notebook</h1>
+
+  <div class="notebook">
+    <div class="page left-page">
+      <p class="page-num">1</p>
+      <textarea placeholder="Write here..."></textarea>
+    </div>
+    <div class="page right-page">
+      <p class="page-num">2</p>
+      <textarea placeholder="Write here..."></textarea>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
