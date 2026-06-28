@@ -130,3 +130,31 @@ button:hover {
   opacity: 0;
   transform: scaleX(0.8);
 }
+
+.cover-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.diary-label {
+  font-size: 13px;
+  color: #a0785a;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+#notebook-title {
+  border: none;
+  border-bottom: 1px dashed #c4a882;
+  background: transparent;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  color: #2a1f0e;
+  text-align: center;
+  outline: none;
+  width: 280px;
+}
+
+#notebook-title::placeholder {
+  color: #c4a882;
+}

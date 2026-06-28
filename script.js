@@ -53,3 +53,10 @@ prevBtn.addEventListener('click', () => {
 });
 
 loadSpread();
+
+const titleInput = document.getElementById('notebook-title');
+titleInput.value = localStorage.getItem('notebook-title') || '';
+
+titleInput.addEventListener('input', () => {
+  localStorage.setItem('notebook-title', titleInput.value);
+});
