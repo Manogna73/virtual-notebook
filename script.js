@@ -60,3 +60,10 @@ titleInput.value = localStorage.getItem('notebook-title') || '';
 titleInput.addEventListener('input', () => {
   localStorage.setItem('notebook-title', titleInput.value);
 });
+
+const manifestation = document.getElementById('manifestation');
+manifestation.value = localStorage.getItem('manifestation') || '';
+
+manifestation.addEventListener('input', () => {
+  localStorage.setItem('manifestation', manifestation.value);
+});

@@ -9,10 +9,18 @@
 <body>
 
 <div class="cover-title">
-    <p class="diary-label">✦ My Diary ✦</p>
-    <input type="text" id="notebook-title" placeholder="Give your notebook a name..." maxlength="30"/>
+  <p class="diary-label">✦ My Diary ✦</p>
+  <input type="text" id="notebook-title" placeholder="Give your notebook a name..." maxlength="30"/>
 </div>
-<div class="notebook">
+
+<div class="notebook-wrapper">
+
+  <div class="manifestation-box">
+    <p class="manifestation-label">✦ My Reminders ✦</p>
+    <textarea id="manifestation" placeholder="Write what you want to remember..."></textarea>
+  </div>
+
+  <div class="notebook">
     <span class="flower tl">❀</span>
     <span class="flower tr">❀</span>
     <span class="flower bl">❀</span>
@@ -25,13 +33,15 @@
       <p class="page-num">2</p>
       <textarea placeholder="Write here..."></textarea>
     </div>
-</div>
-
-  <div class="controls">
-    <button id="prev">Previous</button>
-    <button id="next">Next</button>
   </div>
 
-  <script src="script.js"></script>
+</div>
+
+<div class="controls">
+  <button id="prev">Previous</button>
+  <button id="next">Next</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
