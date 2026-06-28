@@ -53,7 +53,12 @@ body {
 textarea {
   flex: 1;
   border: none;
-  background: transparent;
+  background: repeating-linear-gradient(
+    transparent,
+    transparent 27px,
+    #d4c8a8 27px,
+    #d4c8a8 28px
+  );
   resize: none;
   font-family: Georgia, serif;
   font-size: 15px;
